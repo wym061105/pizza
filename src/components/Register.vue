@@ -10,6 +10,7 @@
   <div class="form-group">
     <input type="password" class="form-control" id="input2" v-model="password" placeholder="请输入您的密码">
   </div>
+  
   <div class="form-group">
     <input type="password" class="form-control" id="input3" v-model="repassword" placeholder="请再次确认您的密码">
   </div>

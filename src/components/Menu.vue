@@ -76,7 +76,7 @@ export default {
   name: 'Menu',
   data () {
     return {
-      items:{},
+      // items:{},
       // items:{
       //   0:{
       //     name:'芝士pizza',
@@ -114,7 +114,7 @@ export default {
   mounted(){
     axios.get('./menu-jsx.json')
     .then(res=>{
-      this.items=res.data
+      this.$store.commit('setMenuItems',res.data)
     })
   },
   methods:{
@@ -165,6 +165,9 @@ export default {
       return this.newItems.reduce((sum,cur)=>{
         return sum+cur.quantity*cur.price
       },0)
+    },
+    items(){
+      return this.$store.getters.getMenuItems
     }
   }
  

@@ -4,6 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+
+import { store } from './store/store'
+
+
+
 //配置axios的请求地址路径
 axios.defaults.baseURL='https://wd4898300794nhmcsp.wilddogio.com/'
 axios.get('./get.json')
@@ -24,6 +29,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
